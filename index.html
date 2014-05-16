@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Flow</title>
+		<style type="text/css">
+
+			body { 
+				padding:0;
+				background:rgb(51,51,51); 
+			}
+
+			nav { 
+				width:100%;
+				min-width:750px;
+				padding:0 4%;
+				margin:0; 
+				background:#222;
+			}
+
+			nav a { 
+				display: inline-block;
+				font-size:1.2em;
+				padding:.25em 0;
+				width:12.25%;
+				min-width:100px;
+				text-decoration:none;
+				text-align:center;
+				color:#999;
+			}
+			nav a:hover { 
+				color:white; 
+				color:black; 
+				background:#f0f;
+				background:#FFFFC2;
+			}
+
+			img { 
+				position:absolute;
+				top:3em; 
+				left:0;
+				width: 100%;
+				min-width: 500px;
+			}
+
+			.active {
+				fill:purple !important;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		
+		<nav>
+			<a class="webmaker" href="#Webmaker">Webmaker</a>
+			<a class="codeschool" href="#CodeSchool">CodeSchool</a>
+			<a class="bank" href="#Bank">Bank</a>
+			<a class="jsfiddle" href="#JSFiddle">JSFiddle</a>
+			<a class="comingsoon" href="#ComingSoon">ComingSoon</a>
+			<a class="etherpad" href="#Etherpad">Etherpad</a>
+			<a class="passwordless" href="#Passwordless">Passwordless</a>
+		</nav>
+
+
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 960 400" enable-background="new 0 0 960 400" xml:space="preserve">
+
+			<g id="diagram_white">
+				<g id="arrows">
+					<g id="tomodal">
+						<g>
+							<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="303.6" y1="195.3" x2="373.9" y2="195.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="381,195.5 371,199.5 373.4,195.5 371.1,191.4 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="www2page">
+						<g>
+							<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="156" y1="119.5" x2="374" y2="119.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="381,119.5 371.1,123.6 373.4,119.5 371.1,115.4 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="tobutton">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M155.6,119.5c61.5,0,7.3,72.8,61,78.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="223.7,198.3 213.5,201.8 216.1,197.9 214,193.6 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="topop">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M309,195.3c61.5,0,10.9,73,64.9,78.7"/>
+							<g>
+								<polygon fill="#FFFFFF" points="381,274.3 370.8,277.8 373.4,273.9 371.3,269.6 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="page2both">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M464,119.5c61.5,0,6.3,27.1,59.9,29.2"/>
+							<g>
+								<polygon fill="#FFFFFF" points="531,148.8 520.9,152.6 523.4,148.6 521.2,144.5 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="page2form">
+						<g>
+							<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="464" y1="118.5" x2="524" y2="118.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="530.9,118 521,122.1 523.4,118 521,113.9 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="email2trophy">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M688,41.5c61.6,0,81.8,72.7,141.5,78.1"/>
+							<g>
+								<polygon fill="#FFFFFF" points="836.6,119.9 826.4,123.4 829,119.5 826.9,115.3 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="single2email">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M732,193.2c61.4,0-36.2,67.3,13.7,72.7"/>
+							<g>
+								<polygon fill="#FFFFFF" points="752.7,266.3 742.5,269.8 745.2,265.8 743.1,261.6 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="topage">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M303,195.3c61.5,0,16.5-70.1,70.9-75.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="381,119.5 371.3,124.2 373.4,120 370.8,116 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="form2email">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M605,118.5c61.5,0-12.1-70.1,39.9-75.7"/>
+							<g>
+								<polygon fill="#FFFFFF" points="651.9,42.5 642.3,47.2 644.4,43 641.8,39.1 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="pop2form">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M464,277.8c61.5,0,6.3-119.2,59.9-128.4"/>
+							<g>
+								<polygon fill="#FFFFFF" points="530.9,148.8 521.4,153.8 523.4,149.5 520.7,145.7 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="pop2single">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M464,277.8c65,0,10.8-80.8,59.9-87.6"/>
+							<g>
+								<polygon fill="#FFFFFF" points="530.9,189.8 521.3,194.6 523.4,190.4 520.7,186.5 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="single2trophy">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M732,193.2c61.6,0,41-69.2,97.6-74.4"/>
+							<g>
+								<polygon fill="#FFFFFF" points="836.6,118.5 826.9,123.1 829,118.9 826.4,115 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="modal2both">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M464,195.5c53.5,0,5.7-43.1,59.9-46.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="531,148.8 521.2,153.3 523.4,149.1 520.9,145.1 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="modal2form">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M464,195.5c65,0,10.8-71.1,59.9-77.1"/>
+							<g>
+								<polygon fill="#FFFFFF" points="530.9,118 521.3,122.8 523.4,118.6 520.7,114.7 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="e2totrophy">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M785,266.3c87.2-0.9-33.4-139.9,44.9-147.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="837,118.5 827.3,123.1 829.4,118.9 826.9,115 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="tourl">
+						<g>
+							<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M303,195.3c61.5,0-18.5,144.3,33,155.6"/>
+							<g>
+								<polygon fill="#FFFFFF" points="343,351.7 332.6,354.5 335.5,350.8 333.6,346.5 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="form2trophy">
+						<g>
+							<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="605" y1="119.5" x2="830" y2="119.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="836.6,119.9 826.7,124 829,119.9 826.7,115.8 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="to1">
+						<g>
+							<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="605" y1="193.5" x2="620" y2="193.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="627.5,193 617.5,197.1 619.9,193 617.5,188.9 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="to2">
+						<g>
+							<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="647" y1="193.5" x2="663" y2="193.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="669.7,193 659.7,197.1 662.1,193 659.7,188.9 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="towww">
+						<g>
+							<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="73" y1="118.5" x2="89" y2="118.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="95.7,118 85.7,122.1 88.1,118 85.7,113.9 					"/>
+							</g>
+						</g>
+					</g>
+					<g id="to3">
+						<g>
+							<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="690" y1="193.5" x2="705" y2="193.5"/>
+							<g>
+								<polygon fill="#FFFFFF" points="711.9,193 702,197.1 704.3,193 702,188.9 					"/>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="icons">
+					<path id="trophy" fill="#FFFFFF" d="M882.8,110.3v2.3c0,0.8-0.2,1.7-0.7,2.6c-0.5,0.9-1.2,1.6-2,2.3c-0.8,0.7-1.9,1.3-3.1,1.7
+						c-1.2,0.5-2.5,0.7-3.8,0.8c-0.5,0.6-1.1,1.2-1.7,1.7c-0.5,0.4-0.8,0.8-0.9,1.3c-0.2,0.5-0.3,1-0.3,1.6c0,0.6,0.2,1.2,0.5,1.6
+						c0.4,0.4,0.9,0.7,1.7,0.7c0.9,0,1.7,0.3,2.4,0.8c0.7,0.5,1,1.2,1,2v1.1c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.2,0.2-0.4,0.2h-14.9
+						c-0.2,0-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.2-0.2-0.4v-1.1c0-0.8,0.3-1.5,1-2c0.7-0.5,1.5-0.8,2.4-0.8c0.8,0,1.4-0.2,1.7-0.7
+						s0.5-1,0.5-1.6c0-0.6-0.1-1.1-0.3-1.6s-0.5-0.9-0.9-1.3c-0.6-0.5-1.2-1.1-1.7-1.7c-1.3-0.1-2.6-0.3-3.8-0.8
+						c-1.2-0.5-2.2-1.1-3.1-1.7s-1.5-1.5-2-2.3c-0.5-0.9-0.7-1.7-0.7-2.6v-2.3c0-0.5,0.2-0.9,0.5-1.2s0.7-0.5,1.2-0.5h5.1v-1.7
+						c0-0.8,0.3-1.5,0.8-2c0.6-0.6,1.2-0.8,2-0.8h10.3c0.8,0,1.5,0.3,2,0.8c0.6,0.6,0.8,1.2,0.8,2v1.7h5.1c0.5,0,0.9,0.2,1.2,0.5
+						C882.6,109.5,882.8,109.9,882.8,110.3z M861.3,117.5c-0.9-1.9-1.3-4.1-1.3-6.6h-4.6v1.7c0,0.9,0.6,1.9,1.7,2.9
+						S859.6,117.2,861.3,117.5z M880.5,112.6v-1.7H876c0,2.5-0.4,4.7-1.3,6.6c1.7-0.3,3.1-1,4.2-2S880.5,113.6,880.5,112.6z"/>
+					<path id="person" fill="#FFFFFF" d="M61.3,121c0,0.3-0.1,0.5-0.3,0.7s-0.4,0.3-0.7,0.3c-0.3,0-0.6-0.1-0.8-0.4l-2.3-3.4h-0.5v1.3
+						l2.5,4.1c0.1,0.1,0.1,0.2,0.1,0.3c0,0.2-0.1,0.3-0.2,0.5c-0.1,0.1-0.3,0.2-0.5,0.2h-1.9v2.7c0,0.3-0.1,0.6-0.3,0.8
+						c-0.2,0.2-0.5,0.3-0.8,0.3h-1.6c-0.3,0-0.6-0.1-0.8-0.3c-0.2-0.2-0.3-0.5-0.3-0.8v-2.7H51c-0.2,0-0.3-0.1-0.5-0.2
+						c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.1,0-0.2,0.1-0.3l2.5-4.1v-1.3h-0.5l-2.3,3.4c-0.2,0.3-0.5,0.4-0.8,0.4c-0.3,0-0.5-0.1-0.7-0.3
+						s-0.3-0.4-0.3-0.7c0-0.2,0.1-0.4,0.2-0.5l2.6-3.9c0.5-0.7,1.1-1.1,1.8-1.1h3.9c0.7,0,1.3,0.4,1.8,1.1l2.6,3.9
+						C61.3,120.6,61.3,120.8,61.3,121z M56.5,111.3c0.4,0.4,0.7,1,0.7,1.6c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7
+						c-0.6,0-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6c0-0.6,0.2-1.2,0.7-1.6s1-0.7,1.6-0.7C55.5,110.7,56,110.9,56.5,111.3z"/>
+					<path id="email2" fill="#FFFFFF" d="M778,261.6c0,0.5-0.2,1-0.5,1.5s-0.7,0.9-1.2,1.2c-2.5,1.7-4.1,2.8-4.7,3.3
+						c-0.1,0-0.2,0.1-0.4,0.3c-0.2,0.2-0.4,0.3-0.5,0.4c-0.1,0.1-0.3,0.2-0.5,0.3c-0.2,0.1-0.4,0.2-0.6,0.3c-0.2,0.1-0.3,0.1-0.5,0.1h0
+						h0c-0.2,0-0.3,0-0.5-0.1c-0.2-0.1-0.4-0.2-0.6-0.3c-0.2-0.1-0.4-0.2-0.5-0.3c-0.1-0.1-0.3-0.2-0.5-0.4s-0.4-0.3-0.4-0.3
+						c-0.6-0.4-1.5-1-2.6-1.8c-1.1-0.8-1.8-1.3-2.1-1.4c-0.4-0.3-0.8-0.7-1.2-1.2s-0.6-0.9-0.6-1.4c0-0.5,0.1-1,0.4-1.3
+						s0.7-0.5,1.2-0.5h14.8c0.4,0,0.8,0.2,1.1,0.5C777.9,260.8,778,261.2,778,261.6z M778,264.6v8c0,0.4-0.2,0.8-0.5,1.1
+						c-0.3,0.3-0.7,0.5-1.1,0.5h-14.8c-0.4,0-0.8-0.2-1.1-0.5c-0.3-0.3-0.5-0.7-0.5-1.1v-8c0.3,0.3,0.6,0.6,1,0.9
+						c2.4,1.6,4.1,2.8,5,3.5c0.4,0.3,0.7,0.5,0.9,0.7c0.2,0.2,0.6,0.3,0.9,0.5c0.4,0.2,0.8,0.2,1.1,0.2h0h0c0.3,0,0.7-0.1,1.1-0.2
+						c0.4-0.2,0.7-0.3,0.9-0.5c0.2-0.2,0.5-0.4,0.9-0.7c1.1-0.8,2.8-2,5-3.5C777.4,265.2,777.7,264.9,778,264.6z"/>
+					<path id="email1" fill="#FFFFFF" d="M679.1,35.9c0,0.5-0.2,1-0.5,1.5c-0.3,0.5-0.7,0.9-1.2,1.2c-2.5,1.7-4.1,2.8-4.7,3.3
+						c-0.1,0-0.2,0.1-0.4,0.3c-0.2,0.2-0.4,0.3-0.5,0.4c-0.1,0.1-0.3,0.2-0.5,0.3s-0.4,0.2-0.6,0.3c-0.2,0.1-0.3,0.1-0.5,0.1h0h0
+						c-0.2,0-0.3,0-0.5-0.1c-0.2-0.1-0.4-0.2-0.6-0.3s-0.4-0.2-0.5-0.3c-0.1-0.1-0.3-0.2-0.5-0.4s-0.4-0.3-0.4-0.3
+						c-0.6-0.4-1.5-1-2.6-1.8s-1.8-1.3-2.1-1.4c-0.4-0.3-0.8-0.7-1.2-1.2s-0.6-0.9-0.6-1.4c0-0.5,0.1-1,0.4-1.3
+						c0.3-0.3,0.7-0.5,1.2-0.5h14.8c0.4,0,0.8,0.2,1.1,0.5C678.9,35.1,679.1,35.5,679.1,35.9z M679.1,38.9v8c0,0.4-0.2,0.8-0.5,1.1
+						c-0.3,0.3-0.7,0.5-1.1,0.5h-14.8c-0.4,0-0.8-0.2-1.1-0.5c-0.3-0.3-0.5-0.7-0.5-1.1v-8c0.3,0.3,0.6,0.6,1,0.9
+						c2.4,1.6,4.1,2.8,5,3.5c0.4,0.3,0.7,0.5,0.9,0.7c0.2,0.2,0.6,0.3,0.9,0.5c0.4,0.2,0.8,0.2,1.1,0.2h0h0c0.3,0,0.7-0.1,1.1-0.2
+						c0.4-0.2,0.7-0.3,0.9-0.5c0.2-0.2,0.5-0.4,0.9-0.7c1.1-0.8,2.8-2,5-3.5C678.5,39.5,678.8,39.2,679.1,38.9z"/>
+				</g>
+				<g id="text">
+					<text id="wwws" transform="matrix(1 0 0 1 106.975 124.4303)" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">www</text>
+					<text id="popup" transform="matrix(1 0 0 1 392.0103 281.7281)" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">PopUp</text>
+					<text id="form" transform="matrix(1 0 0 1 549.9379 124.4308)" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">Form</text>
+					<text id="singlesignon" transform="matrix(1 0 0 1 547.2482 190.0784)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">Single</tspan><tspan x="-5.2" y="18" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">SignOn</tspan></text>
+					<!-- <text id="andor" transform="matrix(1 0 0 1 552.5438 153.079)" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="10">and/or</text> -->
+					<text id="and" transform="matrix(1 0 0 1 561.0399 153.079)" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="10">and</text>
+					<text id="one" transform="matrix(1 0 0 1 632.2571 198.2965)" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">1</text>
+					<text id="two" transform="matrix(1 0 0 1 674.472 198.2972)" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">2</text>
+					<text id="three" transform="matrix(1 0 0 1 716.6867 198.2969)" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">3</text>
+					<text id="page" transform="matrix(1 0 0 1 400.0567 124.4307)" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">Page</text>
+					<text id="url" transform="matrix(1 0 0 1 358.9171 360.549)" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">URL (no account)</text>
+					<text id="modal" transform="matrix(1 0 0 1 393.5747 195.5002)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">Reveal</tspan><tspan x="-10.2" y="18" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">or Modal</tspan></text>
+					<text id="buttonlink" transform="matrix(1 0 0 1 237.748 195.5002)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">Button</tspan><tspan x="-0.1" y="18" fill="#FFFFFF" font-family="'OpenSans-Light'" font-size="18">or LInk</tspan></text>
+				</g>
+			</g>
+		</svg>
+
+
+	</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		var speed = 1000;
+		var highlight = '#ff00ff';
+		highlight = '#98FF98';
+		highlight = '#FFFFC2';
+		var mute = '#555555'
+
+		var arrows = ['tomodal', 'www2page', 'tobutton', 'topop', 'page2form', 'page2both', 'email2trophy', 'single2email', 'topage', 'form2email', 'pop2form', 'pop2single', 'single2trophy', 'modal2form', 'modal2both', 'e2totrophy', 'tourl', 'form2trophy', 'to1', 'to2', 'towww', 'to3'];
+		var icons = ['icons', 'trophy', 'person', 'email2', 'email1'];
+		var labels = ['text', 'popup', 'form', 'singlesignon', 'and', 'one', 'two', 'three', 'page', 'url', 'modal', 'buttonlink'];
+
+		var examples = {
+			webmaker : {
+				elems : ['buttonlink','popup','email2','singlesignon','one','two','three'],
+				arrows : ['tobutton','topop','pop2single','single2email','e2totrophy','to1','to2','to3']
+			},
+			codeschool : {
+				elems : ['buttonlink','page','singlesignon','and','form','one','two','three'],
+				arrows : ['tobutton','topage','page2both','single2trophy','to1','to2','to3']
+			},
+			bank : {
+				elems : ['buttonlink','page','form','email1'],
+				arrows : ['tobutton','topage','page2form','email2trophy','form2email']
+			},
+			passwordless : {
+				elems : ['buttonlink','modal','form','email1'],
+				arrows : ['tobutton','tomodal','modal2form','form2trophy','form2email','email2trophy']
+			},
+			comingsoon : {
+				elems : ['page','form','email1'],
+				arrows : ['www2page','page2form','form2email']
+			},
+			jsfiddle : {
+				elems : ['buttonlink','page','form'],
+				arrows : ['tobutton','topage','page2form','form2trophy']
+			},
+			etherpad : {
+				elems : ['url','buttonlink','page'],
+				arrows : ['www2page','tobutton','tourl','page2form','form2trophy']
+			},
+
+		};
+
+
+		var swap = function (id) {
+			resetFlow();
+
+			$.each(examples[id].elems, function (i,val) {
+				fillColor(val,highlight);
+			});
+			$.each(examples[id].arrows, function (i,val) {
+				lineColor(val,highlight);
+			});
+		};
+
+
+		function fillColor (id,color) {
+			id = '#' + id; 
+			if (color != '#555555') { 
+				$(id).attr('fill',mute).css('opacity',.25).animate({opacity: 1, }, 1000);
+			}
+			$(id).attr('fill',color);
+			$(id + ' tspan').attr('fill',color);
+		};
+
+
+		function lineColor (id,color) {
+			id = '#' + id; 
+			var element = $(id);
+			element.parent().append(element);
+
+			if (color != '#555555') { // if we're highlighting things
+				$(id + ' line').css('opacity',.25).animate({opacity: 1, }, 1000);
+				$(id + ' path').css('opacity',.25).animate({opacity: 1, }, 1000);
+				$(id + ' polygon').css('opacity',.25).animate({opacity: 1, }, 1000);
+			}
+
+			$(id + ' line').attr('stroke',color);
+			$(id + ' path').attr('stroke',color);
+			$(id + ' polygon').attr('fill',color);
+
+
+		};
+
+
+
+
+		var resetFlow = function () {
+			$.each(icons, function (i,val) {
+				fillColor(val,mute);
+			});
+			$.each(labels, function (i,val) {
+				fillColor(val,mute);
+			});
+			$.each(arrows, function (i,val) {
+				lineColor(val,mute);
+			});
+
+			fillColor('person',highlight);
+			fillColor('trophy',highlight);
+			fillColor('wwws',highlight);
+			lineColor('towww',highlight);
+
+		};
+
+
+		$('nav').on('click','a', function () {
+			var id = $(this).attr('class');
+			swap(id);
+		});
+
+
+	</script>
+
+</html> 
