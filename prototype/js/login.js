@@ -99,7 +99,9 @@ app.fakeEmail = function (id) {
 	$('#' + id).fadeIn();
 };
 
-
+app.persona = function () {
+    window.open("http://placekitten.com/g/550/400", "_blank", "toolbar=no, location=no, scrollbars=no, resizable=no, status=no, top=500, left=100, width=500, height=300");
+};
 
 app.setListeners = function () {
 	$('body').on('click', '.pagelink', function(evt){
@@ -147,7 +149,7 @@ app.setListeners = function () {
 		app.setHeader('user', 'Patricio')
 	});
 
-
+	$('.persona').on('click', app.persona);
 
 };
 
