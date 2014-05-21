@@ -49,7 +49,7 @@ app.checkLogin = function () { /* @todo persistence */
 		app.setHeader('user', 'Patricio')
 	} else { 
 		app.setHeader('login');
-		app.demo = 'new';
+		app.demo = 'pwless-new';
 	};
 };
 
@@ -57,22 +57,33 @@ app.checkLogin = function () { /* @todo persistence */
 app.switchDemo = function (demo) {
 
 	var afterlogin = $('.login button');
+	var body = $('body')
+	body.removeClass();
 
+	// @todo rename new and returning to newuser returninguser
 	switch(demo) {
-	case 'new' :
-		afterlogin.data('page', 'welcome');
-		break;
-	case 'returning' :
-		afterlogin.data('page', 'key');
-		break;
-	default :
-		break;
+		case 'pwless-new' :
+			afterlogin.data('page', 'welcome');
+			body.addClass('demo-pwless');
+			break;
+		case 'pwless-returning' :
+			afterlogin.data('page', 'key');
+			body.addClass('demo-pwless');
+			break;
+		case 'social-new' :
+			body.addClass('demo-social');
+			break;
+		case 'social-returning' :
+			body.addClass('demo-social');
+			break;
+		default :
+			break;
 	};
 
 	app.switchPage('home');
 	app.setHeader('login') 
 
-	var msg = 'demo swithed to ' + demo + ' user';
+	var msg = 'demo swithed to ' + demo;
 	app.notice(msg);
 
 };
@@ -104,8 +115,31 @@ app.openEmail = function (elem) {
 	elem.siblings('article').fadeToggle();
 };
 
-app.persona = function () {
-    window.open("http://placekitten.com/g/550/400", "_blank", "toolbar=no, location=no, scrollbars=no, resizable=no, status=no, top=500, left=100, width=500, height=300");
+app.doLogin = function () {
+	if( app.demo === 'pwless-new'){
+		console.log('login submitted');
+		app.setHeader('user','Your Profile')
+		app.notice('Success! You are now logged in.');	
+		app.fakeEmail('firstemail');		
+	} else if ( app.demo === 'pwless-returning') {
+		app.fakeEmail('keyemail');					
+	}
+};
+
+app.popupLogin = function () {
+    var popup = window.open("http://placekitten.com/g/550/400", "socialsignon", "toolbar=no, location=no, scrollbars=no, resizable=no, status=no, top=500, left=100, width=500, height=300");
+    popup.focus();
+	app.setHeader('user','Amira')
+	app.notice('Success! You are now logged in.');	
+};
+
+
+app.reorderSocial = function () {
+	var persona = $('.socialmore .persona').remove();
+	// persona.appendTo('.socialmore p');
+	$('.socialmore p').append('<a class="persona" href="#"><i class="fa fa-user"></i> Persona</a>');
+	var mysocial = $(this).remove();
+	mysocial.prependTo('.socialmore p');
 };
 
 app.setListeners = function () {
@@ -115,23 +149,16 @@ app.setListeners = function () {
 		app.switchPage(id);
 	});
 
-	$('body').on('click', '.loginsubmit', function(evt){
-		if( app.demo === 'new'){
-			console.log('login submitted');
-			app.setHeader('user','Your Profile')
-			app.notice('Success! You are now logged in.');	
-			app.fakeEmail('firstemail');		
-		} else if ( app.demo === 'returning') {
-			app.fakeEmail('keyemail');					
-		}
+	$('.loginsubmit').on('click', function(evt){
+		app.doLogin();
 	});
 
-	$('body').on('click', '.keysubmit', function(evt){
+	$('.keysubmit').on('click', function(evt){
 		app.setHeader('user', 'Patricio')
 		app.notice('Success! You are now logged in.');
 	});
 
-	$('.demo select').find('option[value="new"]').attr("selected",true);
+	$('.demo select').find('option[value="pwless-new"]').attr("selected",true);
 
 	$('.demo').on('change', 'select', function () {
 		app.demo =  $('.demo option:selected').val();
@@ -141,7 +168,6 @@ app.setListeners = function () {
 	$('.logout').on('click', function () {
 		app.logout();
 	});
-
 
 	$('#confirmationlink').on('click', function () {
 		app.switchPage('user');
@@ -154,7 +180,9 @@ app.setListeners = function () {
 		app.setHeader('user', 'Patricio')
 	});
 
-	$('.persona').on('click', app.persona);
+	$('.persona, .social-btn').on('click', app.popupLogin);
+
+	$('.social-btn').one('click', app.reorderSocial);
 
 	$('.email h2').on('click', function () {
 		app.openEmail($(this));

@@ -134,6 +134,30 @@ a.persona {
 	text-decoration: none;
 }
 
+a.persona:hover {
+	background:#0af; 
+}
+
+.demo-social a.persona { 
+	font-size:1.25em; 
+	margin:0 .25em 0 0;
+}
+
+.social-btn { 
+    margin-top:-.5em;
+    font-size:2em;
+    color:#666;
+    margin:0 .25em 0 0;
+    vertical-align: -3px;
+}
+.social-btn:hover {
+    color:#0af;
+    background: none;
+}
+
+
+
+
 /**
  * notice & alerts
  * 
@@ -165,6 +189,24 @@ a.persona {
 	background:#999;
 }
 
+
+/**
+ * demo switch
+ * 
+ */
+
+.demo-social .passwordless,
+.demo-pwless .socialmore { /* hide things only needed for other demo */
+	display:none;
+}
+
+.socialmore {
+	width:100%;
+}
+
+.socialmore+p {
+	clear:both;
+}
 /**
  * responsive
  * 

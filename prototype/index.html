@@ -9,7 +9,7 @@
 
 	</head>
 
-	<body>
+	<body class="demo-pwless">
 		<section id="fakephone">
 			<header>
 				<h1 class="pagelink" data-page="home">Webmaker</h1>
@@ -25,13 +25,23 @@
 
 			<section id="loginpage" class="page">
 				<h2>Login</h2>
-				<h3>New & current users</h3>
-				<form class="login">
-					<label for="emailsms" >Email or Phone #</label>
-					<input name="emailsms" value="fake@gmails.net" placeholder="Email or Phone#">
-					<button class="pagelink loginsubmit" data-page="welcome">Go</button>
-				</form>
-				<p>Or use <a class="persona" href="#"><i class="fa fa-user"></i> Persona</a></p>
+				<div class="passwordless">
+					<h3>New & current users</h3>
+					<form class="login">
+						<label for="emailsms" >Email or Phone #</label>
+						<input name="emailsms" value="fake@gmails.net" placeholder="Email or Phone#">
+						<button class="pagelink loginsubmit" data-page="welcome">Go</button>
+					</form>
+					<p>Or use <a class="persona" href="#"><i class="fa fa-user"></i> Persona</a></p>
+				</div>
+				<div class="socialmore" >
+					<p>
+						<a class="persona" href="#"><i class="fa fa-user"></i> Persona</a>
+						<a class="social-btn" href="#"><i class="fa fa-google-plus-square"></i></a>
+						<a class="social-btn" href="#"><i class="fa fa-facebook-square"></i></a>
+						<a class="social-btn" href="#"><i class="fa fa-github-square"></i></a>
+					</p>
+				</div>
 				<p><small>Your privacy & security is our priority. <a href="#" class="pagelink" data-page="privacy">Learn more &#187;</a>.</small></p>
 			</section>
 
@@ -139,8 +149,10 @@
 			<p>
 				Demo:
 				<select>
-					<option value="new">New User</option>
-					<option  value="returning">Returning User</option>
+					<option value="pwless-new">Passwordless New User</option>
+					<option  value="pwless-returning">Passwordless Returning</option>
+					<option  value="social-new">Social Sign-on</option>
+					<!-- <option  value="social-returning">Social Returning</option> -->
 				</select>
 				No form info is sent or stored. 
 			</p>
