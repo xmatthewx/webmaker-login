@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Signup Prototype</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	</head>
+
+	<body>
+		<section id="fakephone">
+			<header>
+				<h1 class="pagelink" data-page="home">Webmaker</h1>
+				<a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
+				<nav>
+					<a class="hamburger" href="#"><i class="fa fa-bars"></i></a>
+				</nav>
+			</header>
+			
+			<section id="homepage" class="page"><h2>Explore</h2><p>Lorem ipsum....</p><img class="thumb"><img class="thumb"><img class="thumb"><img class="thumb"><img class="thumb"><img class="thumb"></section>
+
+			<section id="loginpage" class="page">
+				<h2>Login</h2>
+				<h3>New & current users</h3>
+				<form class="login">
+					<label for="emailsms" >Email or Phone #</label>
+					<input name="emailsms" value="fake@gmails.net" placeholder="Email or Phone#">
+					<button class="pagelink loginsubmit" data-page="welcome">Go</button>
+				</form>
+				<p><small>Your privacy & security is our priority. <a href="#" class="pagelink" data-page="privacy">Learn more &#187;</a>.</small></p>
+			</section>
+
+			<section id="keypage" class="page">
+				<h2>Great!</h2>
+				<h3><i class="fa fa-envelope"></i> We sent you a key. Enter it to login. </h3>
+				<form>
+					<label for="emailsms" >Key</label>
+					<input name="emailsms" value="" placeholder="key">
+					<button class="pagelink keysubmit" data-page="home">Go</button>
+				</form>
+				<p><small>
+					For your security, the key will expire in 15 minutes.
+					<ul>
+						<li><a class="pagelink" data-page="login" href="#">Get a new key</a>.</li>
+						<li>Having trouble? <a class="pagelink" data-page="help" href="#">Get help</a>.</li>
+					</ul>
+				</small></p>
+				<p><small>Your privacy & security is our priority. <a href="#" class="pagelink" data-page="privacy">Learn more &#187;</a>.</small></p>
+
+			</section>
+
+			<section id="userpage" class="page">
+				<h2>Welcome [username]</h2>
+				<h3>Manage your profile, settings, and makes.</h3>
+				<p><button class="logout">Logout</button></p>
+				<img class="thumb"><img class="thumb"><img class="thumb"><img class="thumb"><img class="thumb"><img class="thumb">
+				<p>Lorem ipsum....</p>
+			</section>
+
+			<section id="welcomepage" class="page">
+				<h2>Welcome!</h2>
+				<h3>Webmaker invites you to huzzah!</h3>
+				<p><i class="fa fa-envelope"></i> We sent you a note by email/text. Please check it to confirm your account in the next 3 days.</p>
+				<a class="pagelink btn" href="#" data-page="home">Jump into Webmaker</a>
+				<p>Your can create and save your makes today. After you confirm your account, you can publish and share them with anyone!</p>
+				<p><small><a href="#">Learn more &#187;</a></small></p>
+			</section>
+
+			<section id="helppage" class="page">
+				<h2>Help</h2>
+				<h3>Trouble logging in? Help is here.</h3>
+				<ol>
+					<li>Enter your email or phone number.</li>
+					<li>Get the secret key sent your your email or phone.
+						<ul>
+							<li>The key expires after 15 minutes.</li>
+							<li>The key can only be used by the person who made it.</li>
+						</ul>
+					</li>
+					<li>Enter the key.</li>
+					<li>Still having trouble? <a href="#">Send us a note</a>.</li>
+				</ol>
+			</section>
+
+			<section id="privacypage" class="page">
+				<h2>Privacy & Security</h2>
+				<h3>Like peanut butter and jelly.</h3>
+				<p>Lorem ipsum...</p>
+				<ol>
+					<li>aaa</li>
+					<li>bbb</li>
+					<li>ccc</li>
+					<li>Still have questions? <a href="#">Send us a note</a>.</li>
+				</ol>
+			</section>
+
+			<div id="notice">Success! You are now logged in.</div>
+
+		</section><!-- #fakephone -->
+
+		<section id="fakeemail">
+			<h1><i class="fa fa-envelope"></i></h1>
+			<section id="firstemail" class="email">
+				<h3>Welcome to Webmaker</h3>
+				<p class="emailheader">
+					From: info@webmaker.org<br>
+					To: <span>you@gmail.com</span>
+				</p>
+				<p>Thanks for joining Webmaker. Together, we can do xyz.</p>
+				<p>Confirm your email address with this link in the next 7 days: <a id="confirmationlink" href="#">http://webmaker.org/23a983apadsdfp983adhxzx9</a></p>
+				<h3>Look ma, no password!</h3>
+				<p>To login, Webmaker will send you a temporary key. Passwords can be lost, stolen, and cracked. </p>
+				<p>Questions about anything? <a href="#">Ask our helpful community</a> of mentors and webmakers like you.</p>
+			</section>
+			<section id="keyemail" class="email" >
+				<h3>Webmaker Key</h3>
+				<p class="emailheader">
+					From: info@webmaker.org<br>
+					To: <span>you@gmail.com</span>
+				</p>
+				<p>Did you request a key to Webmaker?</p>
+				<p><a class="keylink" href="#">Login now</a> or for <a class="keylink" href="#">1 year</a> if your browser is private. Or, copy this code into webmaker: 7ader97x</p>
+				<p>FYI: This link will stop working in 15 minutes. If you didn't request the key, delete this message.</p>
+				<p>Questions? <a href="#">Ask our helpful community</a> of mentors and webmakers like you.</p>
+			</section>
+		</section>
+
+
+		<footer class="demo">
+			<p>
+				Demo:
+				<select>
+					<option value="new">New User</option>
+					<option  value="returning">Returning User</option>
+				</select>
+				No form info is sent or stored. 
+			</p>
+		</footer>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/login.js" type="text/javascript"></script>
+	</body>
+</html> 
