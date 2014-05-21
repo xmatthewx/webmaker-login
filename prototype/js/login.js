@@ -23,22 +23,23 @@ app.switchPage = function (id) {
 
 
 app.setHeader = function (state,name) {
-	var html; 
+
+	var userlink = $('#userlink');
+	var loginlink = $('#loginlink');
 
 	switch(state) {
 		case 'user' :
-			html = '<a class="pagelink useraccess" data-page="user" href="#"><i class="fa fa-user"></i> ' + name + '</a>';
-
+			userlink.show().find('span').text(name);
+			loginlink.hide();
 			break;
 		case 'login' :
-			html = '<a class="pagelink useraccess" data-page="login" href="#">Login/Signup <i class="fa fa-paper-plane-o"></i></a>';
+			userlink.hide();
+			loginlink.show();
 			break;
 		default :
 			break;
 	};
 
-	$('.useraccess').remove();
-	$('header nav').prepend(html);
 };
 
 
