@@ -144,6 +144,7 @@ app.setListeners = function () {
 	$('.keylink').on('click', function () {
 		app.switchPage('home');
 		app.notice('You are now logged in.');
+		app.setHeader('user', 'Patricio')
 	});
 
 
