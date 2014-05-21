@@ -126,6 +126,13 @@ a.btn {
 }
 a.btn:hover { background:#0af; } 
 
+a.persona { 
+	display:inline-block;
+	background:#666;
+	color:white;
+	padding:1px .25em;
+	text-decoration: none;
+}
 
 /**
  * notice & alerts
