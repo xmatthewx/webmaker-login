@@ -242,6 +242,14 @@ footer.demo select { font-size:1em;}
 	color:#999;
 }
 
+.email { display: none; }
+
+.email h2 {
+	border:1px solid #ddd;
+	border-width:2px 0 1px;
+	padding:.25em 0;
+}
+
 /**
  * fake responsive
  * 
@@ -262,5 +270,4 @@ footer.demo select { font-size:1em;}
 		margin-top:.25em; 
 	}
 
-.email { display: none; }
 
