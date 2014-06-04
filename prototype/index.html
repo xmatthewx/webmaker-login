@@ -68,6 +68,7 @@
 			<section id="userpage" class="page">
 				<h2>Welcome [username]</h2>
 				<h3>Manage your profile, settings, and makes.</h3>
+				<p id="auth-required" class="highlight">Your can create and save your makes today. After you confirm your account, you can publish and share them with anyone!<br><small><a href="#">Send a new confirmation email</a>.</small></p>
 				<p><button class="logout">Logout</button></p>
 				<img class="thumb"><img class="thumb"><img class="thumb"><img class="thumb"><img class="thumb"><img class="thumb">
 				<p>Lorem ipsum....</p>
@@ -87,7 +88,7 @@
 				<h3>Trouble logging in? Help is here.</h3>
 				<ol>
 					<li>Enter your email or phone number.</li>
-					<li>Get the secret key sent your your email or phone.
+					<li>Get the secret key sent to your email or phone.
 						<ul>
 							<li>The key expires after 15 minutes.</li>
 							<li>The key can only be used by the person who made it.</li>
@@ -110,7 +111,7 @@
 				</ol>
 			</section>
 
-			<div id="notice">Success! You are now logged in.</div>
+			<div id="notice" class="highlight">Success! You are now logged in.</div>
 
 		</section><!-- #fakephone -->
 
@@ -138,7 +139,7 @@
 						To: <span>you@gmail.com</span>
 					</p>
 					<p>Did you request a key to Webmaker?</p>
-					<p><a class="keylink" href="#">Login now</a> or for <a class="keylink" href="#">1 year</a> if your browser is private. Or, copy this code into webmaker: 7ader97x</p>
+					<p><a class="keylink" data-msg="You are now logged in." href="#">Login now</a> or for <a class="keylink" data-msg="You are now logged for 1 year." href="#">1 year</a> if your browser is private. Or, copy this code into webmaker: 7ader97x</p>
 					<p>FYI: This link will stop working in 15 minutes. If you didn't request the key, delete this message.</p>
 					<p>Questions? <a href="#">Ask our helpful community</a> of mentors and webmakers like you.</p>
 				</article>

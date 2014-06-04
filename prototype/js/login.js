@@ -59,6 +59,7 @@ app.switchDemo = function (demo) {
 	var afterlogin = $('.login button');
 	var body = $('body')
 	body.removeClass();
+	$('#auth-required').hide(); // @todo abstract this
 
 	// @todo rename new and returning to newuser returninguser
 	switch(demo) {
@@ -170,13 +171,16 @@ app.setListeners = function () {
 	});
 
 	$('#confirmationlink').on('click', function () {
+		$('#auth-required').hide();
 		app.switchPage('user');
-		app.notice('You account is now confirmed.');
+		app.notice('Your account is now confirmed.');
 	});
 
 	$('.keylink').on('click', function () {
+		var msg = $(this).data('msg');
+		console.log(msg);
 		app.switchPage('home');
-		app.notice('You are now logged in.');
+		app.notice(msg);
 		app.setHeader('user', 'Patricio')
 	});
 

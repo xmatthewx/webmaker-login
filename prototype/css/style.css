@@ -167,11 +167,13 @@ a.persona:hover {
 	display: none;
     position: absolute;
     top:15%; left:5%; right:5%;
-    background:#FFF8DC;
-    padding:1em;
-    text-align: center;
 }
 
+.highlight {
+    background:#FFF8DC;
+    padding:1em;
+    text-align: center;	
+}
 
 
 /**
