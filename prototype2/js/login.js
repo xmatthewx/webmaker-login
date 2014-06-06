@@ -176,9 +176,9 @@ templates = {
 		footer : '<p>Or login with <a href="#persona" class="persona btn btn-info"><i class="fa fa-user"></i>Persona</a></p>',
 	},
 	getkey : {
-		title : 'We emailed you a key <i class="fa fa-envelope" style="color:#27aae1;"></i>',
+		title : '<i class="fa fa-envelope" style="color:#aaa;"> </i> We emailed you a key',
 		body : '<form class="form"> <div class="form-group key-group"> <label for="key">Enter your key to login</label> <input name="key" id="key" class="form-control" required=""> </div> <div class="checkbox"> <label><input name="rememberme" type="checkbox"> Remember me on this device <i class="fa fa-question-circle"></i></label> </div> <a class="submit-key btn btn-primary" href="#">Login</a> </form>',
-		footer : '<p>Frustrated with these keys? <a class="modallink" data-modal="setpassword" href="#">Set a password</a>.</p>',		
+		footer : '<p>Trouble with key? <a href="#">Get help.</a> Frustrated with these keys? <a class="modallink" data-modal="setpassword" href="#">Set a password</a>.</p>',		
 	},
 	setpassword : {
 		title : 'Set your Password',
