@@ -36,12 +36,18 @@ app.setHeader = function (state,name) {
 
 
 app.createUser = function (next) {
+	user.email = $('#newemail').val();
 	user.name = $('#newusername').val();
-	app.swapText();
-	if ( next === 'hello') {
-		app.setHeader();
+
+	if (user.email === 'matthew@abc.org') {
+		app.switchModal('alreadyexists');
+	} else {
+		app.swapText();
+		if ( next === 'hello') {
+			app.setHeader();
+		}
+		app.switchModal(next);
 	}
-	app.switchModal(next);
 };
 
 
@@ -150,7 +156,7 @@ app.setListeners = function () {
 templates = {
 	signup : {
 		title : 'Sign Up',
-		body : '<form class="form"> <div class="form-group username-group"> <label for="newemail">Email</label> <input name="newemail" type="email" class="form-control" required=""> </div> <div class="checkbox"> <label> <input name="agreeToTerms" type="checkbox"> I agree to Webmaker\'s <a href="https://webmaker.org/en-US/terms">terms</a> and <a href="https://webmaker.org/en-US/privacy">conditions</a> </label> </div> <button class="create-user btn btn-primary" type="button" data-next="create">Sign Up</button> </form>',
+		body : '<form class="form"> <div class="form-group username-group"> <label for="newemail">Email</label> <input name="newemail" id="newemail" type="email" class="form-control" required=""> </div> <div class="checkbox"> <label> <input name="agreeToTerms" type="checkbox"> I agree to Webmaker\'s <a href="https://webmaker.org/en-US/terms">terms</a> and <a href="https://webmaker.org/en-US/privacy">conditions</a> </label> </div> <button class="create-user btn btn-primary" type="button" data-next="create">Sign Up</button> </form>',
 		footer: '',
 	},
 	create : {
@@ -187,6 +193,11 @@ templates = {
 	usernotfound : {
 		title : 'Nobody found :(',
 		body : '<p>Are you sure you\'ve been here before?</p> <p>Try to <a class="modallink" data-modal="login" href="#">login</a> with a different username or email address.</p> <p>Or, <a class="modallink" data-modal="signup" href="#">sign Up</a> to create a new account.</p>',
+		footer : '<a class="btn btn-default" href="#">Get Help</a>',
+	},
+	alreadyexists : {
+		title : 'Email already exists',
+		body : '<p>You can try to <a class="modallink" data-modal="login" href="#">login</a>, or we can <a class="modallink" data-modal="getkey" href="#">email you a Key</a> to jump right in. </p> <p><a class="modallink btn btn-info" data-modal="getkey" href="#">Email me a Key</a></p>',
 		footer : '<a class="btn btn-default" href="#">Get Help</a>',
 	},
 };
