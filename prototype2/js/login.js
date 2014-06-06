@@ -19,6 +19,7 @@ app.switchModal = function (id) {
 	}
 	app.swapText();
 	modal.fadeIn();
+	modal.find('input').first().focus();
 };
 
 
