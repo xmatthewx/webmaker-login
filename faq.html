@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FAQ</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<style type="text/css">
+			body { 
+				color:white; background:#333; 
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 100;
+				font-size:1em; text-align:left;
+				padding:2em;
+			}
+
+			.container { 
+				margin:0 auto; 
+				width:90%;
+				max-width:640px;
+				min-width:360px;
+			}
+
+			h4 { margin:-1em 0 0;}
+
+			nav { margin:0 0 1em; text-align:right;}
+			nav a { color:#333; background:#ccc; margin:0 .25em; padding:.25em; text-decoration:none; } 
+			nav a:hover { background:white; } 
+
+
+			article { 
+				border-bottom:1px dotted #ccc; 
+				margin-bottom:2em;  
+			}
+			article:hover { background:#3a3a3a; }
+			article p { display: none; padding:.25em .5em;  }
+
+			header { color:#ccc; font-size:1.25; padding:.25em .5em; }
+			header:hover { color:white; background:#000; cursor:pointer;}
+
+			ol { }
+
+		</style>
+	</head>
+
+	<body>
+
+		<section class="container">
+
+			<h1>Webmaker</h1>
+			<h4>Nouveau Login</h4>
+
+			<p>We are experimenting with a new form of login. Instead of passwords, the site and the visitor share a secret handshake anytime they need it. This link, or short bit of text is temporary. There's nothing to remember, forget, or have stolen.</p> 
+
+			<a name="faq" ></a>
+			<nav><a class="toggle open" href="#faq">Open all</a> <a class="toggle close" href="#faq">Close all</a></nav>
+
+			<ol>
+				<li><article>
+					<header>What do we call this new fangled system?</header>
+					<p>Great question! Some ideas include: key, freepass, sitecode, pin, sitepass, secret. Right now, I'm trying out the name Handshake. What do you think of it?</p>
+				</article></li>
+
+				<li><article>
+					<header>What's the goal of this handshake system?</header>
+					<p>The goal is to reduce the frustration, friction, and insecurity that come from weak, forgotten, and stolen passwords -- or, in other words-- to increase security, privacy, and trust.</p>
+				</article></li>
+
+				<li><article>
+					<header>Hasn't social sign-on solved this problem already?</header>
+					<p>Yes. And no. Facebook, Google, and a few other services dominate social, or federated, sign-on. While their system reduces some frustration, it compromises privacy and requires people to join a service (and all the terms that come with it) that they might not want. </p>
+				</article></li>
+
+				<li><article>
+					<header>Is this new handshake system a pain in the butt?</header>
+					<p>No. Many sites use a cookie in your browser to keep you logged in between visits, so you don't need to do the handshake often. Good sites ask you if you want them to “remember me on this computer” or not.</p>
+				</article></li>
+
+				<li><article>
+					<header>What if I use public computers or can't stay logged in for some reason?</header>
+					<p>This system allows you to use a password if you prefer it for your situation. It only sends the secret handshake if you don't have one. You can switch between using a password or not very easily.</p>
+				</article></li>
+
+				<li><article>
+					<header>Isn't this just like a password?</header>
+					<p>In some ways, yes. But it's fleeting, temporary -- there when you need it, gone when you don't. Why don't we just call it a temporary password? Bad habits are hard to break. We need to tilt the paradigm, to change the conversation around privacy and security, to redesign the web we have and help build the web we want. This system favors getting rid of passwords as we know them. </p>
+				</article></li>
+
+				<li><article>
+					<header>Is this secure?</header>
+					<p>This doesn't use new technology. Instead, it reframes a safe and common password recovery process. It rearranges existing experiences to help us avoid the weakest links in our security: weak passwords, vulnerable password storage, and passwords that somebody repeatedly uses on many sites. It is more secure than the most common current solution. </p>
+				</article></li>
+
+				<li><article>
+					<header>What if someone breaks into my email?</header>
+					<p>If they do that, all of your accounts are already vulnerable because of the “forgot password” link. This handshake system makes it more obvious that you must protect your email. And, using more handshakes and fewer passwords makes it more likely that your password for your email will be unique and strong.</p>
+				</article></li>
+
+				<li><article>
+					<header>Can I get my handshake in a text instead of an email?</header>
+					<p>Soon, yes. There's no reason you can't have your handshake sent to you via email or text or both. In theory, we could send it anywhere, even to a URL that triggers your arduino login sidekick.  </p>
+				</article></li>
+
+				<li><article>
+					<header>Should we use this handshake system for email accounts?</header>
+					<p>You could, by using text messages to receive your handshake. Vital sites with email, health records, and bank and credit card info should probably use "two-factor authentication." In other words, they should require a password and a handshake of some form. </p>
+				</article></li>
+
+				<li><article>
+					<header>Shouldn't we just use two-factor authentication with hardware-based retina scanning or DNA verification for everything?</header>
+					<p>Uh, maybe? But remember: security at the expense of usability, comes at the expense of security. If a system is impractical, people will find shortcuts that make it less secure. </p>
+				</article></li>
+
+			</ol>
+
+		</section>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+
+		function toggleFaq (elem) {
+			elem.siblings('p').fadeToggle();
+		};
+
+
+		$('header').on('click', function () {
+			toggleFaq($(this));
+		});
+
+		$('.close').on('click', function () {
+			$('p').fadeOut();
+		});
+		$('.open').on('click', function () {
+			$('p').fadeIn();
+		});
+
+		$('article').first().find('p').delay(500).fadeIn(1000);
+
+
+	</script>
+	</body>
+</html> 
