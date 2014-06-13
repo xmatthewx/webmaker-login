@@ -113,7 +113,6 @@ app.setListeners = function () {
 
 	$('.modal').on('click', '.create-user', function () {
 		var next = $(this).data('next');
-		console.log('hello?');
 		app.createUser(next);
 	});
 
@@ -172,12 +171,12 @@ templates = {
 	},
 	login : {
 		title : 'Login',
-		body : '<form class="form"> <div class="form-group username-group"> <label for="email">Email</label> <input name="email" type="email" class="form-control" required=""> </div> <div class="form-group hidden"> <label for="password">Password</label> <input type="password" name="password" required=""> </div> <p>By proceeding, you agree to Webmaker\'s <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.</p> <button class="submit-userid btn btn-primary" type="button">Login</button> </form>',
+		body : '<form class="form"> <div class="form-group username-group"> <label for="email">Email</label> <input name="email" type="email" class="form-control" required=""> </div> <div class="form-group hidden hidden-pwd-field"> <label for="password">Password</label> <input type="password" name="password" required="" value="&middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; "> </div> <p>By proceeding, you agree to Webmaker\'s <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.</p> <button class="submit-userid btn btn-primary" type="button">Login</button> </form>',
 		footer : '<p>Or login with <a href="#persona" class="persona btn btn-info"><i class="fa fa-user"></i>Persona</a></p>',
 	},
 	getkey : {
-		title : '<i class="fa fa-envelope" style="color:#aaa;"> </i> We emailed you a key',
-		body : '<form class="form"> <div class="form-group key-group"> <label for="key">Enter your key to login</label> <input name="key" id="key" class="form-control" required=""> </div> <div class="checkbox"> <label><input name="rememberme" type="checkbox"> Remember me on this device <i class="fa fa-question-circle"></i></label> </div> <a class="submit-key btn btn-primary" href="#">Login</a> </form>',
+		title : 'Enter your Key',
+		body : '<form class="form"> <div class="form-group key-group"> <label for="key"><i class="fa fa-envelope" style="color:#aaa;"> </i> We emailed you a key. Enter it to login.</label> <input name="key" id="key" class="form-control" required=""> </div> <div class="checkbox"> <label><input name="rememberme" type="checkbox"> Remember me on this device <i class="fa fa-question-circle"></i></label> </div> <a class="submit-key btn btn-primary" href="#">Login</a> </form>',
 		footer : '<p>Trouble with key? <a href="#">Get help.</a> Frustrated with these keys? <a class="modallink" data-modal="setpassword" href="#">Set a password</a>.</p>',		
 	},
 	setpassword : {
@@ -207,18 +206,28 @@ app.startLogin = function (email) {
 	switch (email) {
 		case 'amira@abc.org' :
 			user.name = 'Amira';
-			app.finishLogin();
+			console.log('amira');
+			$('.hidden-pwd-field').hide().removeClass('hidden').fadeIn(300, function () {
+				console.log('fadein');
+				var t = setTimeout(app.finishLogin, 1000);
+			});
 			break;
 		case 'matthew@abc.org' :
 			user.name = 'Matthew';
-			app.switchModal('getkey');
+			var t = setTimeout(function () {
+				app.switchModal('getkey');
+			}, 1000);
 			break;
 		case 'cade@abc.org' :
 			user.name = 'Cade';
-			app.switchModal('getpassword');
+			var t = setTimeout(function () {
+				app.switchModal('getpassword');
+			}, 1000);
 			break;
 		default :
-			app.switchModal('usernotfound');
+			var t = setTimeout(function () {
+				app.switchModal('usernotfound');
+			}, 1000);
 			break;
 	}
 };
