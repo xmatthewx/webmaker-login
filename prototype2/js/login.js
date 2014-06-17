@@ -16,6 +16,7 @@ app.switchModal = function (id) {
 	modal.find('.modal-footer').html(templates[id].footer);
 	if ( templates[id].header ) {
 		modal.find('.modal-header').append(templates[id].header);
+		templates[id].header = ''; // uh, only do this hack once plz
 	}
 	app.swapText();
 	modal.fadeIn();
@@ -166,7 +167,7 @@ templates = {
 	},
 	hello : {
 		title : 'Hello <span class="username">[username]</span>',
-		body : '<p>Welcome to Webmaker!</p><ul> <li>Check your email to confirm your account.</li> <li>Create your <a href="#profile">profile</a> or explore all the <a href="#explore">projects you can remix</a>!</li> </ul> <p><a class="btn btn-primary start" >Start using <span>[thimble]</span></a></p>',
+		body : '<p>Welcome to Webmaker!</p><ul> <li>Check your email to confirm your account.</li> <li>Create your <a href="#profile">profile</a> or explore all the <a href="#explore">projects you can remix</a>!</li> </ul> <p><a class="btn btn-primary start" >Start using <span>Webmaker</span></a></p>',
 		footer : '<a class="btn btn-default" href="#">Get Help</a>',
 	},
 	login : {
@@ -191,12 +192,12 @@ templates = {
 	},
 	usernotfound : {
 		title : 'Nobody found :(',
-		body : '<p>Are you sure you\'ve been here before?</p> <p>Try to <a class="modallink" data-modal="login" href="#">login</a> with a different username or email address.</p> <p>Or, <a class="modallink" data-modal="signup" href="#">sign Up</a> to create a new account.</p>',
+		body : '<p>Are you sure you\'ve been here before?</p> <p><ul><li>Try to <a class="modallink" data-modal="login" href="#">login</a> with a different username or email address.</li><li>Or, <a class="modallink" data-modal="signup" href="#">sign Up</a> to create a new account.</li></ul></p>',
 		footer : '<a class="btn btn-default" href="#">Get Help</a>',
 	},
 	alreadyexists : {
 		title : 'Email already exists',
-		body : '<p>You can try to <a class="modallink" data-modal="login" href="#">login</a>, or we can <a class="modallink" data-modal="getkey" href="#">email you a Key</a> to jump right in. </p> <p><a class="modallink btn btn-info" data-modal="getkey" href="#">Email me a Key</a></p>',
+		body : '<p>This email already exists. You can try to <a class="modallink" data-modal="login" href="#">login</a>, or we can <a class="modallink" data-modal="getkey" href="#">email you a Key</a> to jump right in. </p> <p><a class="modallink btn btn-info" data-modal="getkey" href="#">Email me a Key</a></p>',
 		footer : '<a class="btn btn-default" href="#">Get Help</a>',
 	},
 };
